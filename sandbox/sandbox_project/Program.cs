@@ -2,6 +2,17 @@ using System;
 
 public class Program
 {
+
+    static public int Sum(int n)
+    {
+        if (n == 1)
+        {
+            return 1;
+        }
+        
+        return n + Sum(n - 1);
+    }
+
     static void Main(string[] args)
     {
         // This project is here for you to use as a "Sandbox" to play around
@@ -9,5 +20,6 @@ public class Program
         // one of your projects.
 
         Console.WriteLine("Hello Sandbox World!");
+        Console.WriteLine($"Sum of 1 to 5: {Sum(5)}");
     }
 }
